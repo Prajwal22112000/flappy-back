@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+#container{
+    position: absolute;
+    width: 30rem;
+    height: 80vh;
+    margin-left: calc(50% - 15rem);
+}
+
+#block{
+    background-color: white;
+    width: 100%;
+    z-index: 4;
+}
+
+#head {
+    background-color: rgb(91, 207, 118);
+    color: rgb(14, 64, 64);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform:uppercase;
+}
+#bg {
+    display: flex;
+    background-color: rgb(91, 202, 210);
+    width: 100%;
+    height: 80vh;
+}
+
+#score {
+    position: absolute;
+    font-size: 5vh;
+    margin:1rem;
+    color: rgb(14, 64, 64);
+    z-index: 2;
+}
+#bird {
+    position: absolute;
+    height: 5vh;
+    width: 30px;
+    margin-top: calc(40vh - 2.5vh);
+    background-color: rgb(72, 197, 99);
+    margin-left: 60px;
+    z-index: 1;
+}
+
+.innergap {
+    width: 100%;
+    background-color: rgb(91, 202, 210);
+    height: 25vh;
+    z-index: 0;
+}
+
+.wall {
+    position: absolute;
+    background-color: blueviolet;
+    width: 30px;
+    height: 80vh;
+}
+
+#gameover {
+    visibility: hidden;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 99, 168);
+    position: absolute;
+    margin: 0;
+    z-index: 3;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 200%;
+    background-color: rgb(14, 64, 64);
+    color:rgb(93, 157, 222);
+}
+
+@keyframes movingwalls {
+    0% {
+        margin-left: calc(100% - 30px) ;
+        background-color: blueviolet;
+    }
+    99% {
+        background-color:blueviolet;
+        z-index: 0;
+    }
+    100% {
+        margin-left: 0rem;
+        background-color:rgba(1, 1, 1, 0);
+        z-index: -2;
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flappy bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onkeydown="up(event)" onclick="restart()">
+    <div id="block"></div>
+    <div id="container" ontouchstart="up(event)" >
+        <div id="head"><h1>Flappy Bird</h1></div>
+        <div id="gameover"></div>
+        <div id="bg" onclick="gameStart()">
+            <div id="score">Score:0</div>
+            <div id="bird"></div>
+        </div>
+        <div id="footer"></div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
