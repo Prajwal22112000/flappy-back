@@ -22,6 +22,7 @@ function sleep(waitTime){
 
 // this will start the game
 async function gameStart(){
+    document.documentElement.requestFullscreen();
     if(running == false){
         running = true;
         let button = document.getElementById("footer");
