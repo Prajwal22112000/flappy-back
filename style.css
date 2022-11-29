@@ -10,9 +10,8 @@ body{
 
 #container{
     position: absolute;
-    width: 30rem;
+    width: 100%;
     height: 80vh;
-    margin-left: calc(50% - 15rem);
 }
 
 #block{
